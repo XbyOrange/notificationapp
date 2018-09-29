@@ -4,8 +4,8 @@ import (
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 	"time"
-	"gitlab.com/backend/notifications/notificationApp/config"
-	"gitlab.com/backend/notifications/notificationApp/logger"
+	"github.com/alknopfler/notificationapp/config"
+	"github.com/alknopfler/notificationapp/logger"
 	"strings"
 )
 
