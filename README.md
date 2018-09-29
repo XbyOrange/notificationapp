@@ -1,8 +1,27 @@
 # Notification App
 
+The notificationApp is an open source project based on Go in order to send notifications by different channels (by email, sms, etc...) using
+the AWS SNS and AWS SES services.
+One of the main features of the project, is the possibility to create templates based on placesholders (for instance, {{.CustomData.Name}})
+and store that template in the database to be used after that by the notification endpoint.
+
+## Features
+
+- Templates based on placesholders {{.CustomData.XXXX}}
+- Templates Management (Create, Retrieve, and Delete)
+- Templates store based on 3 params: 
+    - Template Id
+    - Channel (sms, email, and so on...)
+    - Language 
+- Multi-channel and Multi-recipient features (The NotificationsApp is able to send to severals users with different channels)
+Send Notifications to users using SNS and SES services (AWS services)
+- Custom the message using Custom Data values to replace in the template placesholder
+- API to use all the features
+
+
 ## Architecture
 
-![GitHub Logo](./NotificationApp.png)
+![GitHub Logo](./notificationapp.png)
 
 ## Store a new Template
 
@@ -44,7 +63,9 @@ As you can see, the template key store in mongo will be the concatenation of:
 
 ## Send Notification (Flow Description)
 The main points will be:
-  - First any microservice generate the Notification Message json:
+  - First, any microservice could generate the Notification Message json:
+  
+http://notification-app:8080/notifications
   
   ```
   {
@@ -66,7 +87,7 @@ The main points will be:
 In that case the translation of this message to human language should be:
 
 ### Account Id:
-Represent a site id in salesforce
+Represent an identificator for the message
 
 ### Subject:
 Represent the subject for the email
