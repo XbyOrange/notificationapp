@@ -23,6 +23,12 @@ Send Notifications to users using SNS and SES services (AWS services)
 
 ![GitHub Logo](./notificationapp.png)
 
+## How to use
+
+There're two endpoints:
+   - Template endpoint in order to manage the different templates
+   - Notification endpoint to send notifications 
+
 ## Store a new Template
 
 This part of the API offer the possibility of create, delete and get the templates available to send notifications
@@ -86,21 +92,21 @@ http://notification-app:8080/notifications
   ```
 In that case the translation of this message to human language should be:
 
-### Account Id:
+#### Account Id:
 Represent an identificator for the message
 
-### Subject:
+#### Subject:
 Represent the subject for the email
 
-### Recipient:
+#### Recipient:
 The list of recipient to send the notification. Could be different type of recipient (email, sms, etc..) but 
 in that case, the notification sent will be just the available if match with the channel.
 In the example, the notification will not be sent to the telephone number as sms, because the channel is one of the list to send the notification
 
-### TemplateType:
+#### TemplateType:
 This is the name of the template loaded previously
 
-### Channel:
+#### Channel:
 This is the way to specify the channel or channels to use in the notification
 (By default if a available channel not appear here, the value will be False. In the example, the sms channel will not be available)
 
