@@ -1,11 +1,11 @@
 package main
 
 import (
-	"gitlab.com/backend/notifications/notificationApp/config"
-	"gitlab.com/backend/notifications/notificationApp/logger"
+	"github.com/alknopfler/notificationapp/config"
+	"github.com/alknopfler/notificationapp/logger"
 	"os"
 	"net/http"
-	"gitlab.com/backend/notifications/notificationApp/api"
+	"github.com/alknopfler/notificationapp/api"
 )
 
 
