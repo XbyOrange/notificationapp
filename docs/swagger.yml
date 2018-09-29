@@ -1,0 +1,178 @@
+swagger: '2.0'
+info:
+  title: Notification App
+  description: Notification service to send email and sms
+  version: '0.1'
+schemes:
+  - http
+
+paths:
+  /notifications:
+    post:
+      summary: Send a notification to a recipient
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: Notification
+          description: The site to add to the account.
+          schema:
+            $ref: '#/definitions/NewNotificationBody'
+      responses:
+        '201':
+          description: Successful operation
+          examples:
+            text: "Successful operation"
+        '400':
+          description: Bad Request (Error processing the template)
+        '500':
+          description: unexpected error
+
+  /templates:
+    get:
+      summary: Retrieve all templates information
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation
+          examples:
+            schema:
+              $ref: '#/definitions/GetBodyResponse'
+        '400':
+          description: Bad Request (Error processing the template)
+        '500':
+          description: unexpected error
+    post:
+      summary: Create a new template
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: template
+          description: The template to be loaded.
+          schema:
+            $ref: '#/definitions/NewTemplateBody'
+      responses:
+        '201':
+          description: Successful operation
+          examples:
+            text: "Successful operation"
+        '400':
+          description: Bad Request (Error processing the template)
+        '500':
+          description: unexpected error
+  /templates/{templateId}:
+    get:
+      summary: Retrieve the template information
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: templateId
+          description: The template id to look for.
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Successful operation
+          examples:
+            schema:
+              $ref: '#/definitions/GetBodyResponse'
+        '400':
+          description: Bad Request (Error processing the template)
+        '500':
+          description: unexpected error
+    delete:
+      summary: Delete the template
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: templateId
+          description: The template id to be deleted.
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Successful operation
+        '400':
+          description: Bad Request (Error processing the template)
+        '500':
+          description: unexpected error
+
+definitions:
+  NewNotificationBody:
+    properties:
+      AccountId:
+        type: string
+      Subject:
+        type: string
+      Recipient:
+        type: array
+        items:
+          type: string
+          description: could be receipient for the different channels in the same array [ "xxx@gmail.com", "+3400000000"]
+      Channel:
+        type: object
+        properties:
+          Email:
+            type: boolean
+            description: if true, send notification by email
+          Sms:
+            type: boolean
+            description: if true, send notification also by sms
+      Language:
+        type: string
+        description: This is the Language string ("ES","EN","US"...)
+      TemplateType:
+        type: string
+        description: This is the template to use for the notification
+      CustomData:
+        type: object
+        description: This is a json with the custom data to be inserted into the template placesholder
+        properties:
+          Name:
+            type: string
+          ItemName:
+            type: string
+
+  GetBodyResponse:
+    properties:
+      template:
+        type: string
+      Content:
+        type: string
+
+  NewTemplateBody:
+    properties:
+      TemplateId:
+        type: string
+      Channel:
+        type: string
+      Lang:
+        type: string
+      Content:
+        type: string
+
+
+  Error:
+    required:
+      - code
+      - message
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
