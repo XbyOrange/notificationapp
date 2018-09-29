@@ -67,7 +67,7 @@ As you can see, the template key store in mongo will be the concatenation of:
   - Language
  
 
-## Send Notification (Flow Description)
+### Send Notification (Flow Description)
 The main points will be:
   - First, any microservice could generate the Notification Message json:
   
@@ -110,10 +110,10 @@ This is the name of the template loaded previously
 This is the way to specify the channel or channels to use in the notification
 (By default if a available channel not appear here, the value will be False. In the example, the sms channel will not be available)
 
-### Language:
+#### Language:
 This is the language for the notification. If there are several templates available for a notification, with the language will be select the correct one.
 
-### Custom data:
+#### Custom data:
 This is the value of the variables in order to be matched into the {{.CustomData.XXXX}} templates placesholder
 
 
