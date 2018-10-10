@@ -2,7 +2,7 @@ package config
 
 import (
 	"os"
-	"github.com/alknopfler/notificationapp/logger"
+	"github.com/OrangeB4B/notificationapp/logger"
 	"strconv"
 )
 

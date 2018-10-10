@@ -1,11 +1,11 @@
 package channels
 
 import (
-	"github.com/alknopfler/notificationapp/db"
+	"github.com/OrangeB4B/notificationapp/db"
 	"strconv"
 	"time"
 	"errors"
-	"github.com/alknopfler/notificationapp/config"
+	"github.com/OrangeB4B/notificationapp/config"
 	"fmt"
 )
 

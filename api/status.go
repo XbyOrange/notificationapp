@@ -3,7 +3,7 @@ package api
 import (
 	"net/http"
 	"net"
-	"github.com/alknopfler/notificationapp/config"
+	"github.com/OrangeB4B/notificationapp/config"
 )
 
 func handleLiveness(w http.ResponseWriter, r *http.Request) {

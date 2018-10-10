@@ -2,7 +2,7 @@ package service
 
 import (
 	"testing"
-	"github.com/alknopfler/notificationapp/db"
+	"github.com/OrangeB4B/notificationapp/db"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"io/ioutil"
 	"encoding/json"
-	"github.com/alknopfler/notificationapp/logger"
-	"github.com/alknopfler/notificationapp/config"
-	"github.com/alknopfler/notificationapp/db"
+	"github.com/OrangeB4B/notificationapp/logger"
+	"github.com/OrangeB4B/notificationapp/config"
+	"github.com/OrangeB4B/notificationapp/db"
 	"github.com/gorilla/mux"
 )
 

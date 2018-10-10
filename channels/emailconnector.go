@@ -2,14 +2,14 @@ package channels
 
 import (
 	"gopkg.in/gomail.v2"
-	"github.com/alknopfler/notificationapp/config"
-	"github.com/alknopfler/notificationapp/db"
+	"github.com/OrangeB4B/notificationapp/config"
+	"github.com/OrangeB4B/notificationapp/db"
 	"errors"
-	"github.com/alknopfler/notificationapp/templates"
+	"github.com/OrangeB4B/notificationapp/templates"
 	"time"
 	"strconv"
 	"github.com/smancke/mailck"
-	"github.com/alknopfler/notificationapp/logger"
+	"github.com/OrangeB4B/notificationapp/logger"
 )
 
 

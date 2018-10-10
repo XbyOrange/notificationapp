@@ -2,10 +2,10 @@ package templates
 
 import (
 	"bytes"
-	"github.com/alknopfler/notificationapp/db"
+	"github.com/OrangeB4B/notificationapp/db"
 	"text/template"
-	"github.com/alknopfler/notificationapp/config"
-	"github.com/alknopfler/notificationapp/logger"
+	"github.com/OrangeB4B/notificationapp/config"
+	"github.com/OrangeB4B/notificationapp/logger"
 	"errors"
 )
 

@@ -1,11 +1,11 @@
 package channels
 
 import (
-	"github.com/alknopfler/notificationapp/db"
+	"github.com/OrangeB4B/notificationapp/db"
 	"testing"
 	"github.com/stretchr/testify/assert"
 	"time"
-	"github.com/alknopfler/notificationapp/config"
+	"github.com/OrangeB4B/notificationapp/config"
 )
 
 var dbEvent1 = &db.Event{

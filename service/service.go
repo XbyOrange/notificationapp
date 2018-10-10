@@ -1,10 +1,10 @@
 package service
 
 import (
-	"github.com/alknopfler/notificationapp/db"
-	"github.com/alknopfler/notificationapp/channels"
-	"github.com/alknopfler/notificationapp/logger"
-	"github.com/alknopfler/notificationapp/config"
+	"github.com/OrangeB4B/notificationapp/db"
+	"github.com/OrangeB4B/notificationapp/channels"
+	"github.com/OrangeB4B/notificationapp/logger"
+	"github.com/OrangeB4B/notificationapp/config"
 	"errors"
 )
 

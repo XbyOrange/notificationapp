@@ -2,7 +2,7 @@ package api
 
 import (
 	"testing"
-	"github.com/alknopfler/notificationapp/db"
+	"github.com/OrangeB4B/notificationapp/db"
 	"net/http"
 	"bytes"
 	"encoding/json"

@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/alknopfler/notificationapp/config"
-	"github.com/alknopfler/notificationapp/logger"
+	"github.com/OrangeB4B/notificationapp/config"
+	"github.com/OrangeB4B/notificationapp/logger"
 	"os"
 	"net/http"
-	"github.com/alknopfler/notificationapp/api"
+	"github.com/OrangeB4B/notificationapp/api"
 )
 
 

@@ -1,7 +1,7 @@
 package channels
 
 import (
-	"github.com/alknopfler/notificationapp/db"
+	"github.com/OrangeB4B/notificationapp/db"
 )
 
 //EventForMessage : Interface to be Implemented For Delivery Channels

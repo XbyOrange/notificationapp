@@ -1,7 +1,7 @@
 package templates
 
 import (
-	"github.com/alknopfler/notificationapp/db"
+	"github.com/OrangeB4B/notificationapp/db"
 	"testing"
 	"github.com/stretchr/testify/assert"
 )

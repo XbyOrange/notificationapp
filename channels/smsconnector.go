@@ -1,12 +1,12 @@
 package channels
 
 import (
-	"github.com/alknopfler/notificationapp/db"
-	"github.com/alknopfler/notificationapp/logger"
+	"github.com/OrangeB4B/notificationapp/db"
+	"github.com/OrangeB4B/notificationapp/logger"
 	"regexp"
-	"github.com/alknopfler/notificationapp/config"
+	"github.com/OrangeB4B/notificationapp/config"
 	"errors"
-	"github.com/alknopfler/notificationapp/templates"
+	"github.com/OrangeB4B/notificationapp/templates"
 	"github.com/aws/aws-sdk-go/aws"
 	"time"
 	"strconv"

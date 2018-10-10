@@ -1,10 +1,10 @@
 package channels
 
 import (
-	"github.com/alknopfler/notificationapp/db"
+	"github.com/OrangeB4B/notificationapp/db"
 	"testing"
 	"github.com/stretchr/testify/assert"
-	"github.com/alknopfler/notificationapp/config"
+	"github.com/OrangeB4B/notificationapp/config"
 )
 
 var fakeEmailRecipient = "alknopfler@xxxx.com"
